@@ -1,757 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Clone Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!--Header-->
+<!-- Header -->
 <div class="header">
-    <nav>
-        <img src="images/logo.png" class="logo">
-        <div>
-            <button class="language-btn">English <img src="images/down-icon.png"></button>
-            <button class="language-btn2">Sign-in</button>
-           
-<!--Features-->
-<div class="features">
-    <div class="row">
-        <div class="text-col">
-            <h2>Enjoy on your TV.</h2>
-            <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
-        </div>
-        <div class="img-col">
-            <img src="images/feature-1.png">
-        </div>
+  <nav>
+    <img src="netflix-logo.png" class="logo" alt="Netflix Logo">
+    <div class="nav-btns">
+      <button class="language-btn">English &#9660;</button>
+      <button class="language-btn2" id="signInToggle">Sign In</button>
     </div>
-    <div class="row">
-        <div class="img-col">
-            <img src="images/feature-2.png">
-        </div>
-        <div class="text-col">
-            <h2>Download your shows to watch offline.</h2>
-            <p>Save your favourites easily and always have something to watch.</p>
-        </div>
-        <div class="row">
-        <div class="text-col">
-            <h2>Watch Everywhere.</h2>
-            <p>Stream Unlimited movies and tv shows on your phone, tablet, laptop, and TV.</p>
-        </div>
-        <div class="img-col">
-            <img src="images/feature-3.png">
-        </div>
-    </div>
-    <div class="row">
-         <div class="img-col">
-            <img src="images/feature-4.png">
-        </div>
-        <div class="text-col">
-            <h2>Create Multiple Profiles.</h2>
-            <p>Share your profile in differnt viewing accounts for household members on Netflix.</p>
-        </div>
+  </nav>
 
-    </div>
- </div>
-
-
-
-<!--FAQ-->
-<div class="container">
-    <h1 class="faq-header">Frequently Asked Questions</h1>
-    
-    <div class="faq-list"> 
-        <div class="faq-item">
-            <input type="checkbox" id="faq1">
-            
-            <label for="faq1">
-                What is Netflix?
-            </label>
-            
-            <div class="faq-answer">
-                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <input type="checkbox" id="faq2">
-            <label for="faq2">
-                How much does Netflix cost?
-            </label>
-            <div class="faq-answer">
-                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD3.99 to USD11.99 a month.</p>
-            </div>
-        </div>
-        
-        <div class="faq-item">
-            <input type="checkbox" id="faq3">
-            <label for="faq3">
-                Where can I watch?
-            </label>
-            <div class="faq-answer">
-                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.</p>
-            </div>
-        </div>
-
- </div>
- <!--Footer-->
- <small>Ready to watch? Enter your email to create or restart your membership.</small>
-    <form class="email-signup">
-        <input type="email" placeholder="Email address" required>
-        <button type="submit">Get Started</button>
+  <!-- Hero Content -->
+  <div class="header-content">
+    <h1>Unlimited movies, TV shows, and more.</h1>
+    <h3>Watch anywhere. Cancel anytime.</h3>
+    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    <form class="email-signup" id="heroForm">
+      <input type="email" id="heroEmail" placeholder="Email address" required>
+      <button type="submit">Get Started &#8250;</button>
     </form>
-
-</div>
-<div class="footer">
-    <div class="footer-content">
-        <p><br> Questions Call 000-800-040-1843</p>
-            <div class="footer-column">
-                <a href="#">FAQ</a>
-                <a href="#">Investor Relations</a>
-                <a href="#">Privacy</a>
-                <a href="#">Speed Test</a>
-            </div>
-            <div class="footer-column">
-                <a href="#">Help Centre</a>
-                <a href="#">Jobs</a>
-                <a href="#">Cookie Preferences</a>
-                <a href="#">Legal Notices</a>
-            </div>
-            <div class="footer-column">
-                <a href="#">Account</a>
-                <a href="#">Ways to Watch</a>
-                <a href="#">Corporate Information</a>
-                <a href="#">Only on Netflix</a>
-            </div>
-            <div class="footer-column">
-                <a href="#">Media Centre</a>
-                <a href="#">Terms of Use</a>
-                <a href="#">Contact Us</a>
-            </div>
-  <div>
   </div>
-    <div class="language-selector-wrapper">
-            <select class="language-btn"> <img src="images/down-icon.png">
-                <option value="english" selected>English</option>
-                <option value="hindi">Hindi</option>
-                <option value="spanish">Spanish</option>
-                <option value="french">French</option>
-                <option value="german">German</option>
-            </select>
-        </div>
-
-        <p class="footer-country">Netflix India</p>
- </div>
 </div>
-   
-<!--login Box-->
-   <div class="login-box">
-        <h2>Sign In</h2>
-            <input type="email" placeholder="Email or phone number" required>
-            <input type="password" placeholder="Password" required>
-            <form action="profies.htm">
-        <button type="submit" class="login-btn">Sign In</button>
-    </form>
-            <div class="form-help">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember"><label for="remember">Remember me</label>
-                </div>
-                <a href="#">Need help?</a>
-            </div>
-        </form>
+
+<!-- Features -->
+<div class="features">
+  <div class="row">
+    <div class="text-col">
+      <h2>Enjoy on your TV.</h2>
+      <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
     </div>
-    
-
-    
+    <div class="img-col">
+      <img src="Posters.1.jpg" alt="TV feature">
+    </div>
+  </div>
+  <div class="row">
+    <div class="img-col">
+      <img src="Posters.2.jpg" alt="Download feature">
+    </div>
+    <div class="text-col">
+      <h2>Download your shows to watch offline.</h2>
+      <p>Save your favourites easily and always have something to watch.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-col">
+      <h2>Watch Everywhere.</h2>
+      <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+    </div>
+    <div class="img-col">
+      <img src="Posters.3.jpg" alt="Watch everywhere feature">
+    </div>
+  </div>
+  <div class="row">
+    <div class="img-col">
+      <img src="Posters.4.jpg" alt="Profiles feature">
+    </div>
+    <div class="text-col">
+      <h2>Create Multiple Profiles.</h2>
+      <p>Share your profile in different viewing accounts for household members on Netflix.</p>
+    </div>
+  </div>
 </div>
 
+<!-- FAQ -->
+<div class="container">
+  <h1 class="faq-header">Frequently Asked Questions</h1>
 
-<script src="script.js">
-</script>
+  <div class="faq-list">
+    <div class="faq-item">
+      <input type="checkbox" id="faq1">
+      <label for="faq1">What is Netflix?</label>
+      <div class="faq-answer">
+        <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+      </div>
+    </div>
 
+    <div class="faq-item">
+      <input type="checkbox" id="faq2">
+      <label for="faq2">How much does Netflix cost?</label>
+      <div class="faq-answer">
+        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD 3.99 to USD 11.99 a month.</p>
+      </div>
+    </div>
 
+    <div class="faq-item">
+      <input type="checkbox" id="faq3">
+      <label for="faq3">Where can I watch?</label>
+      <div class="faq-answer">
+        <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4">
+      <label for="faq4">How do I cancel?</label>
+      <div class="faq-answer">
+        <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+      </div>
+    </div>
+  </div>
+
+  <small>Ready to watch? Enter your email to create or restart your membership.</small>
+  <form class="email-signup" id="faqForm">
+    <input type="email" id="faqEmail" placeholder="Email address" required>
+    <button type="submit">Get Started &#8250;</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-content">
+    <p>Questions? Call 000-800-040-1843</p>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <a href="#">FAQ</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Speed Test</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Help Centre</a>
+        <a href="#">Jobs</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Legal Notices</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Account</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Only on Netflix</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Media Centre</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="language-selector-wrapper">
+      <select class="language-select">
+        <option value="english" selected>English</option>
+        <option value="hindi">Hindi</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+        <option value="german">German</option>
+      </select>
+    </div>
+
+    <p class="footer-country">Netflix India</p>
+  </div>
+</div>
+
+<!-- Login Box (modal) -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box" id="loginBox">
+    <button class="login-close" id="loginClose" aria-label="Close">&times;</button>
+    <h2>Sign In</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email or phone number" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="login-btn">Sign In</button>
+    </form>
+    <div class="form-help">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+      <a href="#">Need help?</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-<style>
-    *{
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
- }
- body{
-      background: #000;
-      color: #fff;
- }
-
-
-
-       /* HEADER SECTION */
-.header{
-    width: 100%;
-    height: 100vh;
-     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("images/hero.jpg.png");
-    background-size: cover;
-    background-position: center;
-    padding: 10px 8%;
-    position: relative;
-     }
-
-
-      /* NAVBAR STYLES */
-    nav{
-         display: flex;
-         align-items:center;        
-         justify-content: space-between;
-         padding:10px 0;
-     }
-
-
-     /* LOGO STYLES */
-     .logo{
-           width: 220px;
-      }
-
-
-      /* NAVIGATION BUTTONS */
-     nav button{
-          background: #db0001;
-          border: none;
-          padding: 7px 20px;
-          color: #fff;
-          font-size: 20px;
-          border-radius: 4px;
-          cursor: pointer;
-          margin-left: 10px;
-      }
-
-
-      /* LANGUAGE BUTTONS */
-      .language-btn{ 
-          position: relative;
-          left: 650px;
-          font-size: 25px;
-          display: inline-flex;
-          align-items: center;
-          background: transparent;
-          border: 1px solid #fff;
-          padding: 7px 10px;
-      }
-      .language-btn2{ 
-          position: relative; 
-          left: 665px;
-          font-size: 25px;
-          display: inline-flex;
-          align-items: center;
-          background: #db0001;
-          border: none;
-          padding: 7px 20px;
-          color: #fff;
-          border-radius: 4px;
-          cursor: pointer;
-          margin-left: 10px;
-          }
-          .language-btn img{
-               margin-left: 10px;
-               width: 10px;
-          }
-
-
-          /* HEADER CONTENT STYLES */
-          .header-content{
-               position: absolute;
-               top: 50%;
-               left: 50%;
-               transform: translate(-50%, -50%);
-               text-align: center;
-               margin-top: 100px;
-          }
-          .header-content h1{
-               font-size: 60px;
-               margin-bottom: 20px;
-               line-height: 70px;
-               font-weight: 600;
-               max-width: 650px;
-          }
-          .header-content h3{
-               font-size: 25px;
-               margin-bottom: 20px;
-               font-weight: 400;
-          }
-          .header-content p{
-               font-size: 20px;
-               margin-bottom: 20px;
-          }
-
-
-
-          /* EMAIL SIGNUP FORM STYLES */
-          .email-signup{
-               margin-top: 30px;
-               background: #fff;
-               display: flex;
-               align-items: center;
-               border-radius: 4px;
-               overflow: hidden;
-          }
-          .email-signup input{
-               flex: 1;
-               border: none;
-               margin-left: 20px;
-               outline: none;
-          }
-          .email-signup button{
-               background: #e50914;
-               color: #fff;
-               border: none;
-               padding: 15px 30px;
-               font-size: 16px;
-               cursor: pointer;
-          }
-
-
-
-          /* FEATURES SECTION */
-         .features{
-               padding: 50px 12%;
-               font-size: 22px;
-          }
-          .row{
-               display: flex;
-               align-items: center;
-               flex-wrap: wrap;
-               width: 100%;
-               padding: 50px 0;
-          }
-
-
-          /* COLUMNS */
-          .text-col{
-               flex-basis: 50%;
-               margin-bottom: 40px;
-               text-align: center;
-          }
-     .img-col
-          {
-               flex-basis: 50%;
-               margin-bottom: 20px;
-          }
-          .img-col img{
-               display: block;
-               width: 100%;
-               margin: auto;
-          }
-
-
-          /* HEADINGS */
-          .features h2{
-               font-size: 50px;
-               margin-bottom: 20px;
-               font-weight: 600;
-          }
-          nav button:hover{
-               background: #f40612;
-          }
-          
-
-
-   /* FAQ SECTION STYLES */
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.faq-section { 
-    padding: 70px 5%;
-    border-top: 8px solid #222;
-    text-align: center;
-}
-
-.faq-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.container { 
-    max-width: 815px; 
-    margin: 0 auto;  
-}
-
-.faq-list {
-    padding: 0;
-}
-
-.faq-item {
-    margin-bottom: 10px;
-    background-color: #303030;
-    text-align: left;
-}
-
-.faq-item input {
-    display: none;
-}
-
-.faq-item label {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 24px 30px;
-    font-size: 1.5rem; 
-    cursor: pointer;
-    position: relative; 
-    transition: background-color 0.2s;
-}
-
-.faq-item label:hover {
-    background-color: #404040;
-}
-
-
-.faq-item label::after {
-    content: '+'; /* The actual plus symbol */
-    font-size: 3rem;
-    line-height: 1;
-    transition: transform 0.3s ease; 
-}
-
-.faq-answer {
-    max-height: 0; 
-    overflow: hidden;
-    padding: 0 30px; 
-    transition: max-height 0.3s cubic-bezier(0.5, 0, 0.1, 1), padding 0.3s ease; 
-    text-align: left;
-}
-
-.faq-answer p {
-    margin: 1em 0; 
-    font-size: 1.1rem;
-    line-height: 1.5;
-} 
-.faq-item input:checked ~ label::after { 
-    transform: rotate(45deg);
-}
-
-.faq-item input:checked ~ .faq-answer {
-
-    max-height: 600px; 
-    padding: 24px,30px;
-}
-
-
-
-/* EMAIL SIGNUP FORM IN FAQ SECTION */
-.faq .email-signup{
-     margin: 20px auto 60px auto;
-     max-width: 600px;
-     margin-top: 30px;
-     background: #fff;
-     display: flex;
-     align-items: center;
-     border-radius: 4px;
-     overflow: hidden;
-     height: 60px;
-}
-
-  .faq small{
-       font-size: 14px;
-  }
-     
-
-/* FOOTER STYLES */
-  .fotter{
-       background: #000;
-       color: #777;
-       padding: 50px 15% 10px;
-       border-top: 6px solid #333;
-  }
-     .fotter p{
-          margin-bottom: 30px;
-          font-size: 18px;
-          font-weight: 400;
-     }
-     .fotter .columns{
-          display: flex;
-          flex-basis: 25%;
-          flex-grow: 1;
-          margin-bottom: 20px;
-     }
-     .fotter .columns a{
-          display: block;
-          color: #777;
-          text-decoration: none;
-          margin-bottom: 10px;
-          font-size: 16px;
-     }
-
-    .site-footer {
-    padding: 70px 45px 50px; 
-    background: #000; 
-    color: #757575; 
-}
-
-.footer-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
-.footer-links {
-   
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 15px 100px; 
-    list-style: none;
-    padding: 0;
-    margin: 30px 0 20px;
-}
-
-.footer-links a {
-    color: #757575;
-    text-decoration: none;
-    font-size: 13px; 
-    margin-bottom: 0; 
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.language-selector-wrapper {
-    margin: 20px 0;
-}
-
-.language-btn {
-  
-    padding: 8px 25px 8px 14px;
-    border: 1px solid #757575; 
-    border-radius: 2px;
-    height: 40px; 
-   
-    color: #757575;
-    font-size: 16px;
-    cursor: pointer;
-
-   
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-}
-
-.language-btn img{
-               margin-left: 10px;
-               width: 10px;
-          }
-
-.footer-country {
-    font-size: 13px;
-    color: #757575;
-    margin-top:24px;
-}
-login-body {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/header-image.jpg.png");
-    background-size: cover;
-}
-
-.login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.75);
-    padding: 60px;
-    width: 450px;
-    border-radius: 4px;
-}
-
-.login-box h2 {
-    margin-bottom: 28px;
-    font-size: 32px;
-}
-
-.login-box input {
-    width: 100%;
-    height: 50px;
-    background: #333;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    color: #fff;
-    padding: 0 20px;
-    margin-bottom: 20px;
-}
-
-.login-btn {
-    width: 100%;
-    padding: 16px;
-    background: #e50914;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 24px;
-}
-
-.form-help {
-    display: flex;
-    justify-content: space-between;
-    color: #b3b3b3;
-    font-size: 13px;
-    margin-top: 10px;
-}
-
-.form-help a {
-    color: #b3b3b3;
-    text-decoration: none;
-}
-
-
-/* Video Icon */
-.canva-video-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.canva-video-icon:hover {
-  background: red;
-  transform: scale(1.1);
-}
-
-/* Fullscreen Overlay */
-.video-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 9999;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-/* Show overlay when clicked */
-.video-overlay:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Fullscreen Video */
-.video-overlay iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 28px;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-</style>
-
-<script>
-    /* ==========================
-   FAQ ACCORDION
-========================== */
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(question => {
-  question.addEventListener("click", () => {
-    const answer = question.nextElementSibling;
-
-    // Close other open answers
-    document.querySelectorAll(".faq-answer").forEach(item => {
-      if (item !== answer) {
-        item.style.display = "none";
-      }
-    });
-
-    // Toggle current answer
-    answer.style.display =
-      answer.style.display === "block" ? "none" : "block";
-  });
-});
-
-
-/* ==========================
-   EMAIL VALIDATION
-========================== */
-const emailInput = document.querySelector(".email-form input");
-const emailButton = document.querySelector(".email-form button");
-
-emailButton.addEventListener("click", () => {
-  const email = emailInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (email === "") {
-    alert("Please enter your email address.");
-  } else if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-  } else {
-    alert("Welcome! This is a demo landing page.");
-    emailInput.value = "";
-  }
-});
-
-
-/* ==========================
-   HEADER SCROLL EFFECT
-========================== */
-const nav = document.querySelector(".nav");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    nav.style.backgroundColor = "rgba(0,0,0,0.9)";
-  } else {
-    nav.style.backgroundColor = "transparent";
-  }
-});
-
-
-/* ==========================
-   BUTTON HOVER EFFECT
-========================== */
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(btn => {
-  btn.addEventListener("mouseenter", () => {
-    btn.style.opacity = "0.9";
-  });
-
-  btn.addEventListener("mouseleave", () => {
-    btn.style.opacity = "1";
-  });
-});
-
-</script>
