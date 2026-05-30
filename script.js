@@ -1,29 +1,77 @@
+/* ============================================================
+   NETFLIX CLONE — MAIN SCRIPT
+   ============================================================ */
 
-const video = document.getElementById("introVideo");
-const playBtn = document.getElementById("playBtn");
-const signInBox = document.getElementById("signInBox");
-const signInBtn = document.getElementById("signInBtn");
+/* ── Sign-In Modal ─────────────────────────────────────── */
+const signInToggle  = document.getElementById('signInToggle');
+const loginOverlay  = document.getElementById('loginOverlay');
+const loginClose    = document.getElementById('loginClose');
+const loginForm     = document.getElementById('loginForm');
 
-let signInShown = false;
+if (signInToggle) {
+  signInToggle.addEventListener('click', () => {
+    if (loginOverlay) loginOverlay.classList.add('show');
+  });
+}
 
-// Start video with sound
-playBtn.addEventListener("click", () => {
-  video.play();
-  playBtn.style.display = "none";
-});
+if (loginClose) {
+  loginClose.addEventListener('click', () => {
+    if (loginOverlay) loginOverlay.classList.remove('show');
+  });
+}
 
-// Check remaining time
-video.addEventListener("timeupdate", () => {
-  const remaining = video.duration - video.currentTime;
+if (loginOverlay) {
+  loginOverlay.addEventListener('click', (e) => {
+    if (e.target === loginOverlay) {
+      loginOverlay.classList.remove('show');
+    }
+  });
+}
 
-  if (remaining <= 3 && !signInShown) { // 3 seconds before end
-    signInShown = true;
-    signInBox.style.opacity = "1";
-    signInBox.style.pointerEvents = "auto";
+if (loginForm) {
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Demo: redirect to profiles page on any sign-in
+    window.location.href = 'profies.htm';
+  });
+}
+
+/* ── Email Signup Forms ────────────────────────────────– */
+function handleEmailForm(formId, inputId) {
+  const form  = document.getElementById(formId);
+  const input = document.getElementById(inputId);
+  if (!form || !input) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = input.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email) {
+      alert('Please enter your email address.');
+    } else if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+    } else {
+      alert('Welcome! This is a demo — sign-up is not live.');
+      input.value = '';
+    }
+  });
+}
+
+handleEmailForm('heroForm', 'heroEmail');
+handleEmailForm('faqForm',  'faqEmail');
+
+/* ── Navbar Scroll Effect (landing page) ────────────────– */
+const navEl = document.querySelector('.nav');
+if (navEl) {
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('nav__black', window.scrollY >= 100);
+  });
+}
+
+/* ── Close video overlay on Escape ─────────────────────– */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (loginOverlay) loginOverlay.classList.remove('show');
   }
-});
-
-// Redirect
-signInBtn.addEventListener("click", () => {
-  window.location.href = "landing.html"; // change this
 });
