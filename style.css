@@ -14,7 +14,7 @@ body {
 .header {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("banner.jpg");
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("netflix-avatar.png");
   background-size: cover;
   background-position: center;
   padding: 10px 8%;
@@ -27,6 +27,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+  transition: background-color 0.3s;
 }
 
 /* LOGO STYLES */
@@ -54,7 +55,6 @@ nav button:hover {
 
 /* LANGUAGE BUTTONS */
 .language-btn {
-  position: relative;
   font-size: 14px;
   display: inline-flex;
   align-items: center;
@@ -67,7 +67,6 @@ nav button:hover {
 }
 
 .language-btn2 {
-  position: relative;
   font-size: 14px;
   display: inline-flex;
   align-items: center;
@@ -343,10 +342,6 @@ small {
   color: #fff;
 }
 
-.language-selector-wrapper {
-  margin: 20px 0;
-}
-
 .footer-country {
   font-size: 13px;
   color: #777;
@@ -429,6 +424,19 @@ small {
   color: #fff;
 }
 
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 5px;
+}
+
+.remember-me label {
+  margin: 0;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .features h2 {
@@ -453,16 +461,6 @@ small {
     padding: 16px 20px;
   }
 
-  .language-btn {
-    font-size: 12px;
-    padding: 5px 8px;
-  }
-
-  .language-btn2 {
-    font-size: 12px;
-    padding: 5px 15px;
-  }
-
   .email-signup {
     flex-direction: column;
     height: auto;
@@ -476,5 +474,10 @@ small {
 
   .email-signup button {
     width: 100%;
+  }
+
+  .footer-column {
+    display: block;
+    margin-right: 0;
   }
 }
