@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who's Watching? — Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="profiles-body">
+
+<div class="profiles-container">
+  <h1>Who's watching?</h1>
+
+  <div class="profiles-list">
+    <div class="profile-card" onclick="selectProfile('Owner')">
+      <img src="Netflix-avatar1.png" alt="Owner">
+      <p>Owner</p>
+    </div>
+
+    <div class="profile-card" onclick="selectProfile('Kids')">
+      <img src="Netflix-avatar2.png" alt="Kids">
+      <p>Kids</p>
+    </div>
+
+    <div class="profile-card" onclick="selectProfile('Guest')">
+      <img src="Netflix-avatar3.png" alt="Guest">
+      <p>Guest</p>
+    </div>
+
+    <div class="profile-card add-profile" onclick="alert('Add Profile — demo only')">
+      <div class="add-icon">+</div>
+      <p>Add Profile</p>
+    </div>
+  </div>
+
+  <button class="manage-btn">Manage Profiles</button>
+</div>
+
+<script>
+function selectProfile(profileName) {
+  try {
+    localStorage.setItem('selectedProfile', profileName);
+  } catch(e) {
+    // localStorage may be unavailable in some environments
+  }
+  window.location.href = 'home.html';
+}
+</script>
+</body>
+</html>

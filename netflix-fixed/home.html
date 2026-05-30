@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="nav" id="nav">
+  <img src="netflix-logo.png" alt="Netflix" class="nav__logo">
+  <img src="netflix-avatar.png" alt="Profile" class="nav__avatar">
+</div>
+
+<!-- Banner -->
+<div class="banner">
+  <div class="banner__contents">
+    <h1 class="banner__title">Stranger Things</h1>
+    <div>
+      <button class="banner__button">&#9654; Play</button>
+      <button class="banner__button">&#9432; More Info</button>
+    </div>
+    <p class="banner__description">
+      When a young boy vanishes, a small town uncovers a mystery involving secret experiments,
+      terrifying supernatural forces and one strange little girl.
+    </p>
+  </div>
+</div>
+
+<!-- Netflix Originals -->
+<div class="home-row">
+  <h2>NETFLIX ORIGINALS</h2>
+  <div class="row_posters">
+    <img src="Posters.1.jpg"  alt="Netflix Original 1"  class="row__poster">
+    <img src="Posters.2.jpg"  alt="Netflix Original 2"  class="row__poster">
+    <img src="Posters.3.jpg"  alt="Netflix Original 3"  class="row__poster">
+    <img src="Posters.4.jpg"  alt="Netflix Original 4"  class="row__poster">
+    <img src="Posters.5.jpg"  alt="Netflix Original 5"  class="row__poster">
+    <img src="Posters.6.jpg"  alt="Netflix Original 6"  class="row__poster">
+    <img src="Posters.7.jpg"  alt="Netflix Original 7"  class="row__poster">
+    <img src="Posters.8.jpg"  alt="Netflix Original 8"  class="row__poster">
+    <img src="Posters.9.jpg"  alt="Netflix Original 9"  class="row__poster">
+    <img src="Posters.10.jpg" alt="Netflix Original 10" class="row__poster">
+  </div>
+</div>
+
+<!-- Trending Now -->
+<div class="home-row">
+  <h2>Trending Now</h2>
+  <div class="row_posters">
+    <img src="Romance-movies1.jpg"  alt="Romance 1"  class="row__poster">
+    <img src="Romance-movies2.jpg"  alt="Romance 2"  class="row__poster">
+    <img src="Romance-movies3.jpg"  alt="Romance 3"  class="row__poster">
+    <img src="Romance-movies4.jpg"  alt="Romance 4"  class="row__poster">
+    <img src="Romance-movies5.jpg"  alt="Romance 5"  class="row__poster">
+    <img src="Romance-movies6.jpg"  alt="Romance 6"  class="row__poster">
+    <img src="Romance-movies7.jpg"  alt="Romance 7"  class="row__poster">
+    <img src="Romance-movies8.jpg"  alt="Romance 8"  class="row__poster">
+    <img src="Romance-movies9.jpg"  alt="Romance 9"  class="row__poster">
+    <img src="Romance-movies10.jpg" alt="Romance 10" class="row__poster">
+  </div>
+</div>
+
+<!-- Top Searches -->
+<div class="home-row">
+  <h2>Top Searches</h2>
+  <div class="row_posters">
+    <img src="Top-Searches1.jpg"  alt="Top Search 1"  class="row__poster">
+    <img src="Top-Searches2.jpg"  alt="Top Search 2"  class="row__poster">
+    <img src="Top-Searches3.jpg"  alt="Top Search 3"  class="row__poster">
+    <img src="Top-Searches4.jpg"  alt="Top Search 4"  class="row__poster">
+    <img src="Top-Searches5.jpg"  alt="Top Search 5"  class="row__poster">
+    <img src="Top-Searches6.jpg"  alt="Top Search 6"  class="row__poster">
+    <img src="Top-Searches7.jpg"  alt="Top Search 7"  class="row__poster">
+    <img src="Top-Searches8.jpg"  alt="Top Search 8"  class="row__poster">
+    <img src="Top-Searches9.jpg"  alt="Top Search 9"  class="row__poster">
+    <img src="Top-Searches10.jpg" alt="Top Search 10" class="row__poster">
+  </div>
+</div>
+
+<!-- Popular Series -->
+<div class="home-row" style="margin-bottom: 80px;">
+  <h2>Popular Series</h2>
+  <div class="row_posters">
+    <img src="Series1.jpg"  alt="Series 1"  class="row__poster">
+    <img src="Series2.jpg"  alt="Series 2"  class="row__poster">
+    <img src="Series3.jpg"  alt="Series 3"  class="row__poster">
+    <img src="Series4.jpg"  alt="Series 4"  class="row__poster">
+    <img src="Series5.jpg"  alt="Series 5"  class="row__poster">
+    <img src="Series6.jpg"  alt="Series 6"  class="row__poster">
+    <img src="Series7.jpg"  alt="Series 7"  class="row__poster">
+    <img src="Series8.jpg"  alt="Series 8"  class="row__poster">
+    <img src="Series9.jpg"  alt="Series 9"  class="row__poster">
+    <img src="Series10.jpg" alt="Series 10" class="row__poster">
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav__black', window.scrollY >= 100);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Clone Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <nav>
+    <img src="netflix-logo.png" class="logo" alt="Netflix Logo">
+    <div class="nav-btns">
+      <button class="language-btn">English &#9660;</button>
+      <button class="language-btn2" id="signInToggle">Sign In</button>
+      <a href="#canvaVideo" class="canva-video-icon" title="Watch Intro">&#9654;</a>
+    </div>
+  </nav>
+
+  <!-- Fullscreen Video Overlay -->
+  <div id="canvaVideo" class="video-overlay">
+    <a href="#" class="close-btn">&#10005;</a>
+    <video controls>
+      <source src="Intro-Netflix.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="header-content">
+    <h1>Unlimited movies, TV shows, and more.</h1>
+    <h3>Watch anywhere. Cancel anytime.</h3>
+    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    <form class="email-signup" id="heroForm">
+      <input type="email" id="heroEmail" placeholder="Email address" required>
+      <button type="submit">Get Started &#8250;</button>
+    </form>
+  </div>
+</div>
+
+<!-- Features -->
+<div class="features">
+  <div class="row">
+    <div class="text-col">
+      <h2>Enjoy on your TV.</h2>
+      <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+    </div>
+    <div class="img-col">
+      <img src="Posters.1.jpg" alt="TV feature">
+    </div>
+  </div>
+  <div class="row">
+    <div class="img-col">
+      <img src="Posters.2.jpg" alt="Download feature">
+    </div>
+    <div class="text-col">
+      <h2>Download your shows to watch offline.</h2>
+      <p>Save your favourites easily and always have something to watch.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-col">
+      <h2>Watch Everywhere.</h2>
+      <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+    </div>
+    <div class="img-col">
+      <img src="Posters.3.jpg" alt="Watch everywhere feature">
+    </div>
+  </div>
+  <div class="row">
+    <div class="img-col">
+      <img src="Posters.4.jpg" alt="Profiles feature">
+    </div>
+    <div class="text-col">
+      <h2>Create Multiple Profiles.</h2>
+      <p>Share your profile in different viewing accounts for household members on Netflix.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="container">
+  <h1 class="faq-header">Frequently Asked Questions</h1>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <input type="checkbox" id="faq1">
+      <label for="faq1">What is Netflix?</label>
+      <div class="faq-answer">
+        <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq2">
+      <label for="faq2">How much does Netflix cost?</label>
+      <div class="faq-answer">
+        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD 3.99 to USD 11.99 a month.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq3">
+      <label for="faq3">Where can I watch?</label>
+      <div class="faq-answer">
+        <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="faq4">
+      <label for="faq4">How do I cancel?</label>
+      <div class="faq-answer">
+        <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+      </div>
+    </div>
+  </div>
+
+  <small>Ready to watch? Enter your email to create or restart your membership.</small>
+  <form class="email-signup" id="faqForm">
+    <input type="email" id="faqEmail" placeholder="Email address" required>
+    <button type="submit">Get Started &#8250;</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-content">
+    <p>Questions? Call 000-800-040-1843</p>
+    <div class="footer-columns">
+      <div class="footer-column">
+        <a href="#">FAQ</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Privacy</a>
+        <a href="#">Speed Test</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Help Centre</a>
+        <a href="#">Jobs</a>
+        <a href="#">Cookie Preferences</a>
+        <a href="#">Legal Notices</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Account</a>
+        <a href="#">Ways to Watch</a>
+        <a href="#">Corporate Information</a>
+        <a href="#">Only on Netflix</a>
+      </div>
+      <div class="footer-column">
+        <a href="#">Media Centre</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="language-selector-wrapper">
+      <select class="language-select">
+        <option value="english" selected>English</option>
+        <option value="hindi">Hindi</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+        <option value="german">German</option>
+      </select>
+    </div>
+
+    <p class="footer-country">Netflix India</p>
+  </div>
+</div>
+
+<!-- Login Box (modal) -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box" id="loginBox">
+    <button class="login-close" id="loginClose" aria-label="Close">&times;</button>
+    <h2>Sign In</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email or phone number" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="login-btn">Sign In</button>
+    </form>
+    <div class="form-help">
+      <div class="remember-me">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+      </div>
+      <a href="#">Need help?</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,825 @@
+/* ============================================================
+   NETFLIX CLONE — GLOBAL STYLESHEET
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* ─── HEADER / HERO ─────────────────────────────────────── */
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url("Posters.1.jpg") center/cover no-repeat;
+  padding: 10px 8%;
+  position: relative;
+  border-bottom: 8px solid #222;
+}
+
+/* ─── NAVBAR ─────────────────────────────────────────────── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 160px;
+  object-fit: contain;
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-btn {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 12px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+.language-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.language-btn2 {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  background: #e50914;
+  border: none;
+  padding: 7px 18px;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.language-btn2:hover {
+  background: #f40612;
+}
+
+/* ─── CANVA VIDEO ICON ───────────────────────────────────── */
+.canva-video-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.canva-video-icon:hover {
+  background: #e50914;
+  transform: scale(1.1);
+}
+
+/* ─── VIDEO OVERLAY ──────────────────────────────────────── */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.video-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.video-overlay video {
+  width: 90%;
+  height: 90%;
+  border: none;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #e50914;
+}
+
+/* ─── HERO CONTENT ───────────────────────────────────────── */
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  max-width: 700px;
+  margin-top: 40px;
+}
+
+.header-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.header-content h3 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.header-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* ─── EMAIL SIGNUP ───────────────────────────────────────── */
+.email-signup {
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 600px;
+  height: 56px;
+}
+
+.email-signup input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 15px;
+  color: #333;
+  height: 100%;
+  background: #fff;
+}
+
+.email-signup button {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 100%;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.email-signup button:hover {
+  background: #f40612;
+}
+
+/* ─── FEATURES ───────────────────────────────────────────── */
+.features {
+  padding: 0 8%;
+  font-size: 18px;
+  border-top: 8px solid #222;
+}
+
+.features .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 60px 0;
+  gap: 40px;
+  border-bottom: 8px solid #222;
+}
+
+.text-col {
+  flex: 1;
+  min-width: 260px;
+}
+
+.img-col {
+  flex: 1;
+  min-width: 260px;
+}
+
+.img-col img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.features h2 {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.features p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ─── FAQ ────────────────────────────────────────────────── */
+.container {
+  max-width: 815px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  border-top: 8px solid #222;
+  text-align: center;
+}
+
+.faq-header {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.faq-list {
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 8px;
+  background-color: #303030;
+  border-radius: 3px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.faq-item input[type="checkbox"] {
+  display: none;
+}
+
+.faq-item label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 28px;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.faq-item label:hover {
+  background-color: #404040;
+}
+
+.faq-item label::after {
+  content: '+';
+  font-size: 2.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 28px;
+  transition: max-height 0.4s cubic-bezier(0.5, 0, 0.1, 1), padding 0.3s ease;
+  background-color: #222;
+  text-align: left;
+}
+
+.faq-answer p {
+  margin: 1em 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.faq-item input:checked ~ label::after {
+  transform: rotate(45deg);
+}
+
+.faq-item input:checked ~ .faq-answer {
+  max-height: 600px;
+  padding: 22px 28px;
+}
+
+small {
+  display: block;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin: 20px 0 10px;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.footer {
+  background: #000;
+  color: #777;
+  padding: 50px 8% 30px;
+  border-top: 6px solid #333;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-content > p {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px 20px;
+  margin-bottom: 24px;
+}
+
+.footer-column a {
+  display: block;
+  color: #777;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+  color: #aaa;
+}
+
+.language-selector-wrapper {
+  margin: 20px 0;
+}
+
+.language-select {
+  padding: 8px 16px;
+  border: 1px solid #757575;
+  border-radius: 3px;
+  background: #000;
+  color: #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-country {
+  font-size: 13px;
+  color: #757575;
+  margin-top: 16px;
+}
+
+/* ─── LOGIN MODAL ────────────────────────────────────────── */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-overlay.show {
+  display: flex;
+}
+
+.login-box {
+  background: rgba(0,0,0,0.9);
+  padding: 50px 60px;
+  width: 90%;
+  max-width: 440px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.login-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.login-close:hover {
+  color: #fff;
+}
+
+.login-box h2 {
+  margin-bottom: 28px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.login-box input::placeholder {
+  color: #999;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #f40612;
+}
+
+.form-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b3b3b3;
+  font-size: 13px;
+  margin-top: 14px;
+}
+
+.form-help a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.form-help a:hover {
+  text-decoration: underline;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.remember-me input {
+  width: auto;
+  height: auto;
+  background: none;
+  margin: 0;
+}
+
+/* ─── PROFILES PAGE ──────────────────────────────────────── */
+.profiles-body {
+  background-color: #141414;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.profiles-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.profiles-container h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 40px;
+}
+
+.profiles-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.profile-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  object-fit: cover;
+}
+
+.profile-card:hover img {
+  border-color: white;
+}
+
+.profile-card p {
+  margin-top: 10px;
+  color: gray;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.profile-card:hover p {
+  color: white;
+}
+
+.add-profile .add-icon {
+  width: 140px;
+  height: 140px;
+  border: 3px solid gray;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add-profile:hover .add-icon {
+  border-color: white;
+  color: white;
+}
+
+.manage-btn {
+  margin-top: 50px;
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid gray;
+  color: gray;
+  font-size: 16px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.manage-btn:hover {
+  border-color: white;
+  color: white;
+}
+
+/* ─── HOME PAGE ──────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  z-index: 100;
+  transition: background-color 0.4s ease;
+  background: linear-gradient(rgba(0,0,0,0.7), transparent);
+}
+
+.nav.nav__black {
+  background-color: #111;
+}
+
+.nav__logo {
+  width: 100px;
+  object-fit: contain;
+}
+
+.nav__avatar {
+  width: 38px;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.banner {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("Posters.1.jpg") center/cover no-repeat;
+  height: 700px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.banner__contents {
+  padding: 0 50px;
+}
+
+.banner__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+.banner__description {
+  width: 70%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 1rem 0;
+  max-width: 500px;
+  color: #ddd;
+}
+
+.banner__button {
+  padding: 0.8rem 1.8rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  background-color: rgba(51,51,51,0.7);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.banner__button:first-child {
+  background-color: #fff;
+  color: #000;
+}
+
+.banner__button:hover {
+  background-color: rgba(51,51,51,0.9);
+  transform: scale(1.04);
+}
+
+.banner__button:first-child:hover {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.home-row {
+  color: white;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.home-row h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.row_posters {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 10px;
+  gap: 8px;
+  scroll-behavior: smooth;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  width: 180px;
+  object-fit: cover;
+  height: 270px;
+  border-radius: 4px;
+  transition: transform 450ms;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+/* ─── MYLIST PAGE ────────────────────────────────────────── */
+.mylist-body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
+
+.mylist-row {
+  color: white;
+  margin: 20px;
+}
+
+.mylist-row h1 {
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .features .row {
+    flex-direction: column;
+  }
+
+  .text-col,
+  .img-col {
+    min-width: 100%;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .email-signup {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+
+  .email-signup input {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+  }
+
+  .email-signup button {
+    width: 100%;
+    height: 50px;
+  }
+
+  .header-content {
+    width: 95%;
+  }
+
+  .login-box {
+    padding: 40px 28px;
+  }
+
+  .nav {
+    padding: 14px 20px;
+  }
+
+  .banner {
+    height: 500px;
+  }
+
+  .banner__contents {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profiles-list {
+    gap: 20px;
+  }
+
+  .profile-card img,
+  .add-profile .add-icon {
+    width: 110px;
+    height: 110px;
+  }
+}
